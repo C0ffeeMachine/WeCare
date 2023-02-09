@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="user-card" *ngIf="user">
+    <div class="user-image">
+      <img src="./../../../assets/Images/male-1354358_960_720.png" alt="">
+    </div>
+    <div class="user-info">
+      <h2>{{user.name}}</h2>
+      <h3>{{user.userId}}</h3>
+      <div class="user-info">
+        <p>Date of Birth: {{user.dateOfBirth}}</p>
+        <p>Email ID: {{user.email}}</p>
+        <p>Mobile Number: {{user.mobileNumber}}</p>
+        <p>Address: {{user.city +", " + user.state + ", "+ user.country}}</p>
+        <p>Pincode: {{user.pincode}}</p>
+      </div>
+      <a routerLink="/userhome"><button class="btn btn-primary"><i class="arrow left"></i> Go back</button></a>
+    </div>
+  </div>
+</div>

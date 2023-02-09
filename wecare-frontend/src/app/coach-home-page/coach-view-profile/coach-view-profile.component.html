@@ -1,0 +1,17 @@
+
+<div class="container">
+  <div *ngIf="coach" class="coach-card">
+    <div class="coach-image">
+      <img src="./../../../assets/Images/male-1354358_960_720.png" alt="">
+    </div>
+    <div class="coach-info">
+      <h2>{{coach.name}}</h2>
+      <h3>{{coach.coachId}}</h3>
+      <div class="user-info">
+        <p>Date of Birth: {{coach.date_of_birth}}</p>
+        <p>Mobile Number: {{coach.mobile_number}}</p>
+        <p>Speciality: {{coach.speciality}}</p>
+      </div>
+    </div>
+  </div>
+</div>

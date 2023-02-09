@@ -1,0 +1,27 @@
+.container{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin: 2rem auto auto auto;
+    border-radius: 10px;
+    min-width: fit-content;
+}
+.radio-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
+    flex-wrap: wrap;
+}
+.radio-button>*{
+    flex: 30%;
+}
+.slot-label{
+    text-align: left!important;
+    margin-left: 0;
+}
+.card-img-top{
+    max-width: 50px;
+}

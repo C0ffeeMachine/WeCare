@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="body collapsed">
+      <div class="row">
+        <div *ngIf="type == 'coach'" class="heading">
+          <img class="card-img-top" src="assets/Images/Life Coach LogIn.jpg" alt="Card image cap">
+          Coach Login
+        </div>
+        <div *ngIf="type =='user'" class="heading">
+          <img class="card-img-top" src="assets/Images/User LogIn.jpg" alt="Card image cap">
+          User Login
+        </div>
+      </div>
+      <form [formGroup]="loginform" >
+        <div class="row">
+          <label for="name">ID</label>
+          <input type="text" class="form-control" id="id" formControlName="id">
+          <p *ngIf="loginform.controls.id.touched && loginform.controls.id.errors" class="text-danger">Please
+            Enter Username</p>
+        </div>
+        <div class="row">
+          <label for="name">Password</label>
+          <input type="password" class="form-control" id="password" formControlName="password">
+          <p *ngIf="loginform.controls.password.touched && loginform.controls.password.errors" class="text-danger">Please
+            Enter Password</p>
+        </div>
+        <div class="row" *ngIf="type == 'coach'">
+          <button class="btn btn-success submit-btn" (click)="submitCoach()">Submit</button>
+        </div>
+        <div class="row" *ngIf="type == 'user'">
+          <button class="btn btn-success submit-btn" (click)="submitUser()">Submit</button>
+        </div>
+        <div class="row text-danger" [hidden]="errorStatus">
+          Please check ID and Password
+        </div>
+      </form>
+    </div>
+  </div>

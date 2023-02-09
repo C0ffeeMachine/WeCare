@@ -1,0 +1,23 @@
+.center{
+    margin: auto;
+}
+.big-button{
+    margin: 5px;
+    width: 100%;
+}
+.card{
+    background-color: #000000;
+    border-radius: 20px;
+    
+}
+.card img{
+    height: auto;
+    width: 50%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.top-heading{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}

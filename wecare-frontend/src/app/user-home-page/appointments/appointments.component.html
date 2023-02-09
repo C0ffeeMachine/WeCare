@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row"  *ngIf="isAppointmentspresent">
+          <div class="card center" style="width: 18rem;" *ngFor="let appointment of appointments">
+              <div class="card-title">
+                  Appointment Date: {{appointment.appointmentDate}} <br>
+                  Slot:{{appointment.slot}}
+              </div>
+
+              <div class="card-body">
+                  Booking Id: {{appointment.bookingId}} <br>
+                  User Id: {{appointment.userId}} <br>
+                  Coach Id: {{appointment.coachId}} <br>
+                  <button (click)="rescheduleAppointment(appointment.bookingId)" class="btn btn-primary" >Reschedule Appointment</button>
+                  <button class="btn btn-danger" >Cancel Appointment</button>
+              </div>
+          </div>
+  </div>
+  <div class="row error" *ngIf="!isAppointmentspresent">
+          <img src="assets/Images/Notepad_icon.svg.png" alt="img"> <br>
+          <h1>
+              You haven't made any appointments yet
+          </h1>
+  </div>
+  <div class="row">
+    <a class='btn btn-primary btn-back' [routerLink]='["/userhome"]'>
+      <i class='glyphicon glyphicon-chevron-left'></i> Go Back
+   </a>
+  </div>
+</div>

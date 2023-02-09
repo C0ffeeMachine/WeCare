@@ -1,0 +1,45 @@
+<div class="container container-md">
+  <div *ngFor="let coach of coaches" class="user-card">
+    <div class="coach-image">
+      <img *ngIf="coach.gender=='M'" src="../../assets/Images/male.png" alt="">
+      <img *ngIf="coach.gender=='F'" src="../../assets/Images/male-1354358_960_720.png" alt="">
+    </div>
+    <div class="coach-info">
+      <h3 class="date-heading">{{coach.name}}</h3>
+      <h4 class="date">{{coach.coachId}}</h4>
+      <div class="ids">
+        <p class="booking-id">Mobile Number: {{coach.mobile_number}}</p>
+        <p class="user-id">Speciality: {{coach.speciality}}</p>
+      </div>
+      <button (click)="bookAppointment(coach.coachId)" class="btn btn-primary">Schedule Appointment</button>
+    </div>
+</div>
+
+<!-- <div class="user-card">
+  <div class="coach-image">
+    <img src="../../assets/Images/male-1354358_960_720.png" alt="">
+  </div>
+  <div class="coach-info">
+    <h2 class="date-heading">Rose</h2>
+    <h3 class="date">CL3434D</h3>
+    <div class="ids">
+      <p class="booking-id">Booking ID: 3434</p>
+      <p class="user-id">User ID: 3434</p>
+    </div>
+  </div>
+</div>
+
+<div class="user-card">
+  <div class="coach-image">
+    <img src="../../assets/Images/male-1354358_960_720.png" alt="">
+  </div>
+  <div class="coach-info">
+    <h2 class="date-heading">Rose</h2>
+    <h3 class="date">CL3434D</h3>
+    <div class="ids">
+      <p class="booking-id">Booking ID: 3434</p>
+      <p class="user-id">User ID: 3434</p>
+    </div>
+  </div>
+</div> -->
+</div>

@@ -1,0 +1,49 @@
+<div class="container ">
+  <div>
+  <form [formGroup]="bookAppointmentForm" *ngIf="!submitted || isError">
+    <h2 class="mb-3"><span><img class="card-img-top" src="./../../../assets/Images/Notepad_icon.svg.png" alt="Card image cap"></span>Reschedule your Appointment</h2>
+    <div class="form-group">
+      <label class="slot-label">Date of Appointment</label>
+      <input type="date" class="form-control" id="DateOfAppointment" name="DateOfAppointment" formControlName="DateOfAppointment">
+      <p *ngIf="bookAppointmentForm.controls.DateOfAppointment.touched && bookAppointmentForm.controls.DateOfAppointment.errors" id="DateOfAppointmentError" class="text-danger">the date should be any upcoming 7 days</p>
+    </div> 
+    <p class="slot-label">Preferred Slot</p>
+    <div class="radio-button">
+      <div>
+        <input id="first" type="radio" value="9AM to 10AM" name="Slot" formControlName="Slot">
+        <label for="first">9AM to 10AM</label>
+      </div>
+    
+      <div>
+          <input id="second" type="radio" value="10AM to 11AM" name="Slot" formControlName="Slot">
+          <label for="second">10AM to 11AM</label>
+      </div>
+      <div>
+        <input id="third" type="radio" value="11AM to 12PM" name="Slot" formControlName="Slot">
+        <label for="third">11AM to 12PM</label>
+      </div>
+
+      <div>
+          <input id="fourth" type="radio" value="2PM to 3PM" name="Slot" formControlName="Slot">
+          <label for="fourth">2PM to 3PM</label>
+      </div>
+      <div>
+          <input id="fifth" type="radio" value="3PM to 4PM" name="Slot" formControlName="Slot">
+          <label for="fifth">3PM to 4PM</label>
+      </div>
+
+      <div>
+          <input id="sixth" type="radio" value="4PM to 5PM" name="Slot" formControlName="Slot">
+          <label for="sixth">4PM to 5PM</label>
+      </div>
+    </div>
+    <button type="submit" [disabled]="!bookAppointmentForm.valid" (click)="register()" class="btn btn-success">Reschedule your Appointment</button>
+    <p *ngIf="isError" class=text-danger>You already have an appointment in this slot</p> 
+  </form>
+  </div>
+
+  <div *ngIf="submitted && !isError">
+    <p>Your appointment is scheduled successfully and you will recieve an email to your registered Email Id soon</p>
+    <button type="button" (click)="goBack()" class="btn btn-primary">Go Back</button>
+  </div>
+</div>

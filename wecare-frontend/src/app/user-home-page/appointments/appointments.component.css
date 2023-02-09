@@ -1,0 +1,44 @@
+.center{
+    margin:auto;
+}
+
+.card{
+    text-align: center;
+    width: 30%;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.card-title{
+    font-size: 20px;
+
+}
+
+.error img{
+    height: auto;
+    width: 20%;
+    text-align: center; 
+}
+
+.error {
+  margin:auto;
+  margin-top: 20%;
+}
+
+.error  h1{
+    margin-top: 50px;
+}
+
+.btn{
+    width:100%;
+    margin-top: 20px;
+}
+
+.btn-back{
+    width: fit-content;
+    margin: auto;
+    margin-top: 20px;
+}
