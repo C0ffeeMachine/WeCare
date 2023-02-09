@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: com.infosys.CoachMsApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.07 s <<< FAILURE! - in com.infosys.CoachMsApplicationTests
+initializationError(com.infosys.CoachMsApplicationTests)  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.Exception: The class com.infosys.CoachMsApplicationTests is not public.
+
+initializationError(com.infosys.CoachMsApplicationTests)  Time elapsed: 0 s  <<< ERROR!
+java.lang.Exception: Test class should have exactly one public constructor
+
+initializationError(com.infosys.CoachMsApplicationTests)  Time elapsed: 0 s  <<< ERROR!
+java.lang.Exception: Method contextLoads() should be public
+
